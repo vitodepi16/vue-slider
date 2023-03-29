@@ -17,20 +17,17 @@
         <div class="carousel-container d-flex">
 
              <div class="slide">
-                <img src="./img/02.webp" alt="">
+                <img :src="images[currentIndex].image" alt="">
             </div>
             <div class="thumbs" >
-                <div class="container-thumbs">
-                    <img src="./img/01.webp" alt="">
-                    <img src="./img/02.webp" alt="">
-                    <img src="./img/03.webp" alt="">
-                    <img src="./img/04.webp" alt="">
-                    <img src="./img/05.webp" alt="">
+                <div class="container-thumbs" 
+                v-for = "(pippo,index) in  images">
+                    <img :src="pippo.image">
                 </div>
-                 <button class="up">
+                 <button class="up" @click="up">
                     <i class="m-3 fa-solid fa fa-arrow-up"></i>
                 </button>
-                <button class="down">
+                <button class="down" @click="down">
                 <i class=" m-3 fa-solid fa fa-arrow-down"></i>
                 </button>
             </div>

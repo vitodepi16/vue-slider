@@ -4,7 +4,7 @@ createApp({
         return{
             images:[
                 {
-                    image: 'img/01.webp',
+                    image: './img/01.webp',
                     title: 'Marvel\'s Spiderman Miles Morale',
                     text: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
                 }, {
@@ -24,7 +24,29 @@ createApp({
                     title: "Marvel's Avengers",
                     text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
                 }
-            ]
+            ],
+            currentIndex : 0
+            
         }
+    },
+    methods:{
+         up(){
+           
+            if (this.currentIndex > 0){
+                this.currentIndex--
+            } else{
+                this.currentIndex = this.images.length-1;
+              
+            } 
+            console.log(this.currentIndex)
+         } , 
+         down(){
+            if (this.currentIndex < this.images.length -1){
+                this.currentIndex++
+            } else{
+                this.currentIndex = 0;
+              
+            } 
+         } 
     }
-})
+}).mount('#app');

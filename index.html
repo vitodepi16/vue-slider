@@ -11,24 +11,37 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div id="app">
-        <div id="wrapped">
+        <div id="app">
+            <div id="wrapped">
         <!-- SECTION SLIDE -->
-        <div class="slide">
-            <!-- SECTION BUTTON  -->
-            <button class="up">
-                <i class="m-3 fa-solid fa fa-arrow-up"></i>
-            </button>
-            <button class="down">
+        <div class="carousel-container d-flex">
+
+             <div class="slide">
+                <img src="./img/02.webp" alt="">
+            </div>
+            <div class="thumbs" >
+                <div class="container-thumbs">
+                    <img src="./img/01.webp" alt="">
+                    <img src="./img/02.webp" alt="">
+                    <img src="./img/03.webp" alt="">
+                    <img src="./img/04.webp" alt="">
+                    <img src="./img/05.webp" alt="">
+                </div>
+                 <button class="up">
+                    <i class="m-3 fa-solid fa fa-arrow-up"></i>
+                </button>
+                <button class="down">
                 <i class=" m-3 fa-solid fa fa-arrow-down"></i>
-            </button>
+                </button>
+            </div>
         </div>
+           
         
 
-    </div>
+        </div>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="./js/css/js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

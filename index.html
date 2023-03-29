@@ -21,8 +21,11 @@
             </div>
             <div class="thumbs"  >
                 <div class="container-thumbs " 
-                v-for = "(image,index) in  images" :class="{'active': index === curentIndex}">
-                    <img :src="image.image">
+                v-for = "(image,index) in  images" >
+                <div class=" h-100 " :class="{'active': index === currentIndex}">
+                    <img :src="image.image" class="deactive" >
+                </div>
+                   
                  
                 </div>
                  <button class="up" @click="up">

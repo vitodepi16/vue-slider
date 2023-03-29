@@ -14,20 +14,21 @@
         <div id="app">
             <div id="wrapped">
         <!-- SECTION SLIDE -->
-        <div class="carousel-container d-flex">
+        <div class="carousel-container d-flex" @mouseover="stop">
 
-             <div class="slide">
+             <div class="slide" @mouseover="stop">
                 <img :src="images[currentIndex].image" alt="">
             </div>
-            <div class="thumbs" >
+            <div class="thumbs" @mouseleave="play" >
                 <div class="container-thumbs" 
                 v-for = "(pippo,index) in  images">
                     <img :src="pippo.image">
+                 
                 </div>
                  <button class="up" @click="up">
                     <i class="m-3 fa-solid fa fa-arrow-up"></i>
                 </button>
-                <button class="down" @click="down">
+                <button class="down" @click="down"  >
                 <i class=" m-3 fa-solid fa fa-arrow-down"></i>
                 </button>
             </div>

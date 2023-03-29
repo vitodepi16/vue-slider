@@ -47,6 +47,12 @@ createApp({
                 this.currentIndex = 0;
               
             } 
-         } 
+         },
+         play(){
+            this.timer = setInterval( this.down, 3000);
+         },
+         stop(){
+            clearInterval(this.timer);
+         }
     }
 }).mount('#app');

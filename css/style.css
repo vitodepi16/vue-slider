@@ -38,10 +38,6 @@
     height: calc(100% / 5);
 }
 
-.box-img.active{
-    display: block;
-}
-
 button{
     color: #ffffff;
     border: none;

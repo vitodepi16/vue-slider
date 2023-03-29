@@ -56,3 +56,10 @@ button .fa{
 .down{
     bottom: 0;
 }
+.deactive {
+    opacity: 0.7;
+}
+.active{
+    opacity: 1!important;
+    border: 2px solid white;
+}

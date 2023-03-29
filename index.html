@@ -16,13 +16,13 @@
         <!-- SECTION SLIDE -->
         <div class="carousel-container d-flex" @mouseover="stop">
 
-             <div class="slide" @mouseover="stop">
+             <div class="slide" @mouseover="stop" @mouseleave="play" >
                 <img :src="images[currentIndex].image" alt="">
             </div>
-            <div class="thumbs" @mouseleave="play" >
-                <div class="container-thumbs" 
-                v-for = "(pippo,index) in  images">
-                    <img :src="pippo.image">
+            <div class="thumbs"  >
+                <div class="container-thumbs " 
+                v-for = "(image,index) in  images" :class="{'active': index === curentIndex}">
+                    <img :src="image.image">
                  
                 </div>
                  <button class="up" @click="up">

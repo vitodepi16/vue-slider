@@ -54,7 +54,6 @@ createApp({
          stop(){
             clearInterval(this.timer);
          }
-        
     },
     mounted(){
         this.play();

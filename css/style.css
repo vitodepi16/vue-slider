@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(3, 232, 232);
 }
 .slide{
     background-color: black;
@@ -61,5 +62,5 @@ button .fa{
 }
 .active{
     opacity: 1;
-    border: 2px solid greenyellow;
+    border: 2px solid rgb(245, 245, 245);
 }

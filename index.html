@@ -20,17 +20,14 @@
   <body>
     <div id="app">
       <div id="wrapped">
-        <div class="text-center text-black rounded-5 fs-5 fst-italic p-5">
-          <h2>{{images[currentIndex].title}}</h2>
-          <h4>{{images[currentIndex].text}}</h4>
-        </div>
+      
         <div class="carousel-container d-flex p-2" @mouseover="stop">
           <div class="slide" @mouseover="stop" @mouseleave="play">
             <img :src="images[currentIndex].image" alt="" />
           </div>
           <div class="thumbs">
             <div class="container-thumbs" v-for="(image,index) in  images">
-              <div class="h-100" :class="{'active': index === currentIndex}">
+              <div class="h-100 deactive" :class="index === currentIndex ? 'active' : 'deactive'">
                 <img :src="image.image"  />
               </div>
             </div>
@@ -42,7 +39,12 @@
             </button>
           </div>
         </div>
+          <div class="text-center text-black rounded-5 fs-5 fst-italic p-5">
+          <h2>{{images[currentIndex].title}}</h2>
+          <h4>{{images[currentIndex].text}}</h4>
+        </div>
       </div>
+      
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
